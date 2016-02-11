@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
-import { buttonStyle } from '../utils/style'
+import classNames from 'classnames'
 
 class Button extends Component {
 
   buttonTypeRender(){
-    let style = buttonStyle(this.props)
-    let type  = this.props.type
+    let style = 'button'
+    let props = this.props;
+
+    style += ` ${classNames(props)}` + ` ${props.className}`
+    let type  = props.type
 
     if (!type || type === 'link')
       return <a className={style}>{this.props.children}</a>
-    else if (type === 'submit')
-      return <button className={style} type="submit" desabled={this.props.disabled}>{this.props.children}</button>
-    else if (type === 'button')
-      return <button className={style} type="button" desabled={this.props.disabled}>{this.props.children}</button>
+    else
+      return <button className={style} type={type} desabled={this.props.disabled}>{this.props.children}</button>
   }
 
   render () {
@@ -24,21 +25,35 @@ class Button extends Component {
 Button.propTypes = {
   children: React.PropTypes.string.isRequired,
   type: React.PropTypes.oneOf(['submit', 'button', 'link', '']),
-  style: React.PropTypes.oneOf(['primary', 'info', 'success', 'warning', 'danger', '']),
-  size: React.PropTypes.oneOf(['small', 'medium', 'large', 'fullwidth', '']),
-  outlined: React.PropTypes.bool,
-  loading: React.PropTypes.bool,
-  disabled: React.PropTypes.bool,
+  "is-primary": React.PropTypes.bool,
+  "is-info": React.PropTypes.bool,
+  "is-success": React.PropTypes.bool,
+  "is-warning": React.PropTypes.bool,
+  "is-danger": React.PropTypes.bool,
+  "is-small": React.PropTypes.bool,
+  "is-medium": React.PropTypes.bool,
+  "is-large": React.PropTypes.bool,
+  "is-fullwidth": React.PropTypes.bool,
+  "is-outlined": React.PropTypes.bool,
+  "is-loading": React.PropTypes.bool,
+  "is-disabled": React.PropTypes.bool,
   className: React.PropTypes.string
 }
 
 Button.defaultProps = {
   type: '',
-  style: '',
-  size: '',
-  outlined: false,
-  loading: false,
-  disabled: false,
+  "is-primary": false,
+  "is-info": false,
+  "is-success": false,
+  "is-warning": false,
+  "is-danger": false,
+  "is-small": false,
+  "is-medium": false,
+  "is-large": false,
+  "is-fullwidth": false,
+  "is-outlined": false,
+  "is-loading": false,
+  "is-disabled": false,
   className: ''
 }
 

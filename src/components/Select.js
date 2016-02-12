@@ -5,9 +5,9 @@ class Select extends Component {
     return (
       <p className="control">
         <span className="select">
-          <select>
+          <select name={this.props.name}>
             {this.props.data.map((data, i) => {
-              <option key={i} value={data.value}>{data.name}</option>
+              return <option key={i} value={data.name}>{data.name}</option>
             })}
           </select>
         </span>
@@ -17,7 +17,8 @@ class Select extends Component {
 }
 
 Select.propTypes = {
-  name: React.PropTypes.array.isRequired
+  name: React.PropTypes.string.isRequired,
+  data: React.PropTypes.array.isRequired
 }
 
 export default Select

@@ -5,8 +5,8 @@ class Checkbox extends Component {
     return (
       <p className="control">
         <label className="checkbox">
-          <input type="checkbox" name={this.props.name}>
-          {this.props.value}
+          <input type="checkbox" name={this.props.name}/>
+          {this.props.description}
         </label>
       </p>
     )
@@ -15,7 +15,7 @@ class Checkbox extends Component {
 
 Checkbox.propTypes = {
   name: React.PropTypes.string.isRequired,
-  value: React.PropTypes.string.isRequired
+  description: React.PropTypes.string.isRequired
 }
 
 export default Checkbox

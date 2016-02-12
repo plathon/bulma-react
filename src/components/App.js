@@ -5,6 +5,7 @@ import Columns from './Columns'
 import Column from './Column'
 import NavBar from './NavBar'
 import Tag from './Tag'
+import Message from './Message'
 //form
 import Search from './Search'
 import Input from './Input'
@@ -49,6 +50,7 @@ export default class App extends Component {
               </p>
             </form>
             <Tag name="Tag Name" is-success/>
+            <Message title="Message title" description="body message component" is-primary />
           </Column>
         </Columns>
       </Container>

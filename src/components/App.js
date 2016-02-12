@@ -4,6 +4,7 @@ import Container from './Container'
 import Columns from './Columns'
 import Column from './Column'
 import NavBar from './NavBar'
+import Tag from './Tag'
 //form
 import Search from './Search'
 import Input from './Input'
@@ -47,6 +48,7 @@ export default class App extends Component {
                 <Button type="button">Cancel</Button>
               </p>
             </form>
+            <Tag name="Tag Name" is-success/>
           </Column>
         </Columns>
       </Container>

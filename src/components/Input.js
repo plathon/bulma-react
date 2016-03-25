@@ -2,35 +2,44 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 
 class Input extends Component {
+
   render(){
     let style = 'input'
-    let props = this.props;
-
+    let props = this.props
     style += ` ${classNames(props)}` + ` ${props.className}`
     let controlClass = (!props['is-loading']) ? 'control' : 'control is-loading'
-    return (
-      <p className={controlClass}>
-        <input className={style}
-               type={this.props.type}
-               name={this.props.name}
-               placeholder={this.props.placeholder}
-               onChange={this.props.handleChange}
-               disabled={this.props['is-disabled']}/>
-      </p>
-    )
+    if (!props.standalone) {
+      return (
+        <p className={controlClass}>
+          <label className="label">{this.props.label}</label>
+          <input {...props}
+                 className={style}
+                 type={props.type}
+                 name={props.name}
+                 disabled={props['is-disabled']}/>
+          <span className="is-danger">{(props.showError) ? props.error : ''}</span>
+        </p>
+      )
+    } else {
+      return <input {...props}
+                    className={style}
+                     type={props.type}
+                     name={props.name}
+                     disabled={props['is-disabled']} />
+    }
   }
+
 }
 
 Input.defaultProps = {
   type: 'text',
-  placehoder: '',
   className: '',
-  disabled: false
+  disabled: false,
+  standalone: false
 }
 
 Input.propTypes = {
   name: React.PropTypes.string.isRequired,
-  handleChange: React.PropTypes.func.isRequired,
   "is-disabled": React.PropTypes.bool
 }
 

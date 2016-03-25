@@ -1,63 +1,235 @@
 import React, { Component } from 'react'
 
 import Container from './Container'
+import Section from './Section'
 import Columns from './Columns'
 import Column from './Column'
-import NavBar from './NavBar'
-import Tag from './Tag'
-import Message from './Message'
-import Notification from './Notification'
-import Icon from './Icon'
-//form
-import Search from './Search'
-import Input from './Input'
-import Select from './Select'
-import Checkbox from './Checkbox'
-import Radio from './Radio'
-import Textarea from './Textarea'
+import Title from './Title'
+import Subtitle from './Subtitle'
+
 import Button from './Button'
 
 export default class App extends Component {
   render () {
     return (
-      <Container>
-        <Columns>
-          <Column>
-            <NavBar>
-              <NavBar position="left">
-                <Search name="serach"
-                        placeholder="buscar"
-                        handleChange={() => {}}
-                        handleSubmit={() => {}}/>
-              </NavBar>
-            </NavBar>
-          </Column>
-          <Column>
-            <h1>Main Page</h1>
-            <Button is-primary>button</Button>
-          </Column>
-          <Column>
-            <form>
-              <Input name="name" handleChange={() => {}} />
-              <Select name="city" data={[{name: 'test'}]} />
-              <Checkbox name="agree" description="agree terms and conditions" />
-              <Textarea name="description" />
-              <p className="control">
-                <Radio name="yes_or_no" value="yes"/>
-                <Radio name="yes_or_no" value="no"/>
-              </p>
-              <p className="control">
-                <Button is-primary type="button">Send</Button>
-                <Button type="button">Cancel</Button>
-              </p>
-            </form>
-            <Tag name="Tag Name" is-success/>
-            <Message title="Message title" description="body message component" is-primary />
-            <Notification description="description text" is-primary/>
-            <Icon icon="home"/>
-          </Column>
-        </Columns>
-      </Container>
+      <Section>
+        <Container>
+
+          <Title is-1>React Bulma Components</Title>
+          <Subtitle is-2>enjoy it! :)</Subtitle>
+
+          <hr />
+
+          <Title>Basic exemples</Title>
+
+          <table className="table">
+            <tbody>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-primary>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-primary>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-info>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-info>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-success>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-success>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-warning>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-warning>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-danger>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-danger>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+            </tbody>
+          </table>
+
+          <Subtitle>Size</Subtitle>
+
+          <table className="table">
+            <tbody>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-small>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-small>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-medium>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-medium>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-large>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-large>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+            </tbody>
+          </table>
+
+          <Subtitle>State</Subtitle>
+
+          <table className="table">
+            <tbody>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-primary is-outlined>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-primary is-outlined>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-primary is-loading>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-primary is-loading>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+              <tr>
+                <Columns>
+                  <td>
+                    <Column is-half>
+                      <Button is-primary is-disabled>Enter</Button>
+                    </Column>
+                  </td>
+
+                  <td>
+                    <Column is-half>
+                      {`<Button is-primary is-disabled>Enter</Button>`}
+                    </Column>
+                  </td>
+                </Columns>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr/>
+            <Subtitle>
+              The pattern is ever the same <strong>{`<component is-active/>`}</strong> or <strong>{`<component is-active={true}/>`}</strong> and to disable use <strong>{`<component is-active={false}/>`}</strong><br/><br/>
+            <p className="is-text-centered">For more: <a href="http://bulma.io/documentation/overview/start/" target="_blank">see the official documentation</a></p>
+            </Subtitle>
+          <hr/>
+
+        </Container>
+      </Section>
     )
   }
 }

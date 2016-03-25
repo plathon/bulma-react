@@ -7,7 +7,7 @@ class Tag extends Component {
     let props = this.props;
     style += ` ${classNames(props)}` + ` ${props.className}`
     return (
-      <span className={style}>{this.props.name}</span>
+      <span {...props} className={style}>{this.props.name}</span>
     )
   }
 }

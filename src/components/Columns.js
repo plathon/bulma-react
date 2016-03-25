@@ -6,10 +6,8 @@ class Columns extends Component {
   columnsRender(){
     let style = 'columns'
     let props = this.props;
-
     style += ` ${classNames(props)}` + ` ${props.className}`
-
-    return <div className={style}>{this.props.children}</div>
+    return <div {...props} className={style}>{this.props.children}</div>
   }
 
   render () {

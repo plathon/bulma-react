@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import classNames from 'classnames'
 
 class Icon extends Component {
   render () {
-    let style = `fa fa-${this.props.icon}`
+    let props = this.props
+    let icon  = `fa fa-${props.icon}`
+    let style = 'icon'
+    style += ` ${classNames(props)}` + ` ${props.className}`
     return (
-      <span className="icon">
-        <i className={style}></i>
+      <span {...props} className={style}>
+        <i className={icon}></i>
       </span>
     )
   }

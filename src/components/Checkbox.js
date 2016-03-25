@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 
 class Checkbox extends Component {
   render(){
+    let props = this.props
     return (
       <p className="control">
         <label className="checkbox">
-          <input type="checkbox" name={this.props.name}/>
-          {this.props.description}
+          <input type="checkbox" {...props}/>
+          {props.description}
         </label>
       </p>
     )
@@ -14,7 +15,6 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
-  name: React.PropTypes.string.isRequired,
   description: React.PropTypes.string.isRequired
 }
 

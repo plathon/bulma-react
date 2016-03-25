@@ -13,7 +13,7 @@ class NavBar extends Component {
     else if (position === 'item') style = `navbar-item ${componentStyle}`
     else if (position === 'left') style = `navbar-left ${componentStyle}`
 
-    return <nav className={style}>{this.props.children}</nav>
+    return <nav {...this.props} className={style}>{this.props.children}</nav>
   }
 }
 

@@ -5,15 +5,12 @@ class Button extends Component {
 
   buttonTypeRender(){
     let style = 'button'
-    let props = this.props;
-
+    let props = this.props
     style += ` ${classNames(props)}` + ` ${props.className}`
-    let type  = props.type
-
-    if (!type || type === 'link')
-      return <a className={style}>{this.props.children}</a>
+    if (props.type === 'link')
+      return <a {...props} className={style} href={this.props.to}>{this.props.children}</a>
     else
-      return <button className={style} type={type} desabled={this.props.disabled}>{this.props.children}</button>
+      return <button {...props} className={style} type={props.type} desabled={this.props['is-disabled']}>{this.props.children}</button>
   }
 
   render () {
@@ -23,38 +20,16 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-  children: React.PropTypes.string.isRequired,
+  children: React.PropTypes.any.isRequired,
   type: React.PropTypes.oneOf(['submit', 'button', 'link', '']),
-  "is-primary": React.PropTypes.bool,
-  "is-info": React.PropTypes.bool,
-  "is-success": React.PropTypes.bool,
-  "is-warning": React.PropTypes.bool,
-  "is-danger": React.PropTypes.bool,
-  "is-small": React.PropTypes.bool,
-  "is-medium": React.PropTypes.bool,
-  "is-large": React.PropTypes.bool,
-  "is-fullwidth": React.PropTypes.bool,
-  "is-outlined": React.PropTypes.bool,
-  "is-loading": React.PropTypes.bool,
-  "is-disabled": React.PropTypes.bool,
-  className: React.PropTypes.string
+  className: React.PropTypes.string,
+  to: React.PropTypes.string
 }
 
 Button.defaultProps = {
-  type: '',
-  "is-primary": false,
-  "is-info": false,
-  "is-success": false,
-  "is-warning": false,
-  "is-danger": false,
-  "is-small": false,
-  "is-medium": false,
-  "is-large": false,
-  "is-fullwidth": false,
-  "is-outlined": false,
-  "is-loading": false,
-  "is-disabled": false,
-  className: ''
+  type: 'link',
+  className: '',
+  to: '#'
 }
 
 export default Button

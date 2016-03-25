@@ -1,28 +1,28 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 
-class Column extends Component {
+class Section extends Component {
 
-  columnsRender(){
-    let style = 'column'
+  sectionRender () {
+    let style = 'section'
     let props = this.props;
     style += ` ${classNames(props)}` + ` ${props.className}`
     return <div {...props} className={style}>{this.props.children}</div>
   }
 
   render () {
-    return this.columnsRender()
+    return this.sectionRender()
   }
 
 }
 
-Column.propTypes = {
+Section.propTypes = {
   children: React.PropTypes.any.isRequired,
   className: React.PropTypes.string
 }
 
-Column.defaultProps = {
+Section.defaultProps = {
   className: ''
 }
 
-export default Column
+export default Section

@@ -6,12 +6,20 @@ class Notification extends Component {
     let style = 'notification'
     let props = this.props;
     style += ` ${classNames(props)}` + ` ${props.className}`
-    return (
-      <div className={style}>
-        <button className="delete"></button>
-        {this.props.description}
-      </div>
-    )
+    if (props.close) {
+      return (
+        <div {...props} className={style}>
+          <button className="delete" onClick={props.close}></button>
+          {this.props.description}
+        </div>
+      )
+    } else {
+      return (
+        <div {...props} className={style}>
+          {this.props.description}
+        </div>
+      )
+    }
   }
 }
 

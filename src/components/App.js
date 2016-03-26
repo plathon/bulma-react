@@ -8,6 +8,7 @@ import Title from './Title'
 import Subtitle from './Subtitle'
 
 import Button from './Button'
+import Notification from './Notification'
 
 export default class App extends Component {
   render () {
@@ -20,7 +21,7 @@ export default class App extends Component {
 
           <hr />
 
-          <Title>Basic exemples</Title>
+          <Title>Basic example</Title>
 
           <table className="table">
             <tbody>

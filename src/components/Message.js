@@ -7,7 +7,7 @@ class Message extends Component {
     let props = this.props;
     style += ` ${classNames(props)}` + ` ${props.className}`
     return (
-      <div className={style}>
+      <div {...props} className={style}>
         <div className="message-header">
           {this.props.title}
         </div>

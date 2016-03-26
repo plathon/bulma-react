@@ -20,7 +20,7 @@ export default class App extends Component {
 
           <hr />
 
-          <Title>Basic exemples</Title>
+          <Title>Basic example</Title>
 
           <table className="table">
             <tbody>

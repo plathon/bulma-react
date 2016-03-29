@@ -2,8 +2,8 @@ import react, { Component } from 'react'
 
 class Modal extends Component {
   render () {
-    let { isOpen } this.props
-    let className = (isOpen) ? 'modal is-open' : 'modal'
+    let { isOpen } = this.props
+    let className  = (isOpen) ? 'modal is-open' : 'modal'
     return (
       <div {...this.props} className={className}>
         <div className="modal-background"></div>
@@ -16,6 +16,10 @@ class Modal extends Component {
       </div>
     )
   }
+}
+
+Modal.defaultProps = {
+  isOpen: false
 }
 
 export default Modal

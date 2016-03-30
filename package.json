@@ -13,13 +13,13 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/plathon/react-bulma"
+    "url": "https://github.com/plathon/bulma-react"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/plathon/react-bulma/issues"
+    "url": "https://github.com/plathon/bulma-react/issues"
   },
-  "homepage": "https://plathon.github.io/react-bulma",
+  "homepage": "https://plathon.github.io/bulma-react",
   "keywords": [
     "react",
     "bulma"

@@ -1,6 +1,6 @@
 {
-  "name": "React-Bulma",
-  "version": "0.0.1",
+  "name": "Bulma-React",
+  "version": "0.0.2",
   "description": "Bulma components build with reacjs",
   "scripts": {
     "start": "node server.js",
@@ -9,6 +9,8 @@
     "test": "mocha --opts mocha.opts",
     "test:watch": "mocha --opts mocha.opts --watch --reporter min"
   },
+  "author": "Renan Plathon <plathonrenan@gmail.com>",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/plathon/react-bulma"
@@ -17,13 +19,16 @@
   "bugs": {
     "url": "https://github.com/plathon/react-bulma/issues"
   },
-  "homepage": "https://github.com/plathon/react-bulma",
+  "homepage": "https://plathon.github.io/react-bulma",
+  "keywords": [
+    "react",
+    "bulma"
+  ],
   "dependencies": {
     "bulma": "0.0.11",
     "classnames": "^2.2.3",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0",
-    "react-router": "^2.0.0-rc5"
+    "react-dom": "^0.14.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -39,7 +44,6 @@
     "expect-jsx": "^2.3.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
-    "lodash": "^4.5.0",
     "mocha": "^2.4.5",
     "style-loader": "^0.13.0",
     "webpack": "^1.9.11",

@@ -1,6 +1,6 @@
 {
-  "name": "Bulma-React",
-  "version": "0.0.2",
+  "name": "bulma-react",
+  "version": "0.0.5",
   "description": "Bulma components build with reacjs",
   "scripts": {
     "start": "node server.js",

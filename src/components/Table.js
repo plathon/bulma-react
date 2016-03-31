@@ -3,10 +3,10 @@ import classNames from 'classnames'
 
 class Table extends Component {
   render () {
-    let style = 'card'
+    let style = 'table'
     let props = this.props
     style += ` ${classNames(props)}` + ` ${props.className}`
-    return <table {...props} className={props}>{this.props.children}</table>
+    return <table {...props} className={style}>{this.props.children}</table>
   }
 }
 

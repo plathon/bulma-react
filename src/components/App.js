@@ -229,7 +229,7 @@ export default class App extends Component {
             <p className="is-text-centered">For more: <a href="http://bulma.io/documentation/overview/start/" target="_blank">see the official documentation</a></p>
             </Subtitle>
           <hr/>
-          
+
           <Title>Tiles</Title>
           <Tile is-ancestor>
             <Tile is-4 is-vertical is-parent>

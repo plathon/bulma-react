@@ -23,4 +23,4 @@ import { Button } from 'bulma-react'
 
 [For more take a look at examples page](http://plathon.github.io/bulma-react)
 
-Talk With Me On Twitter([@renanplathon](https://twitter.com/renanplathon))
+Talk to me on Twitter([@renanplathon](https://twitter.com/renanplathon))
